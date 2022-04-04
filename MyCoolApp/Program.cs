@@ -14,10 +14,10 @@ builder.Services.AddDbContext<DB_Context>(opt =>
 {
     var config = builder.Configuration;
 
-    var Host = config["Host"] ?? "51.250.48.38";
+    var Host = config["Host"] ?? "";
     var port = config["Port"] ?? "5432";
-    var username = config["User ID"] ?? "minkovav";
-    var password = config["Password"] ?? "1qaZ15795321123123";
+    var username = config["User ID"] ?? "";
+    var password = config["Password"] ?? "";
     var db_name = config["Database"] ?? "testDB";
 
     var connectionString = $"User ID={username};Password={password};Host={Host};Port={port};Database={db_name};Integrated Security=true;Pooling=true";
